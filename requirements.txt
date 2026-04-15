@@ -1,0 +1,7 @@
+langchain-ollama
+langchain-openai
+langchain-core>=0.3.0
+httpx
+certifi
+python-dotenv
+rich
