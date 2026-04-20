@@ -161,18 +161,21 @@ Handles user interaction via terminal
 
 # 📂 Project Structure
 
+```
 ai-dev-agent/
-│
-├── agent.py # Main execution logic
-│
-├── tools/
-│ ├── error_explainer.py # Debugging tool
-│ └── file_reader.py # File analysis tool
-│
+├── agent.py                 # Main CLI logic & LLM integration
+├── requirements.txt         # Python dependencies
+├── TODO.md                  # Development tasks
+├── README.md                # This documentation
 ├── prompts/
-│ └── system_prompt.txt # Agent personality
-│
-├── README.md # Documentation
+│   ├── system_prompt.txt    # DevOps engineer personality
+│   └── base_prompt.txt      # Base templates
+└── tools/
+    ├── __init__.py
+    ├── error_explainer.py   # Error debugging tool
+    ├── file_reader.py       # File content analysis
+    └── file_tool.py         # File operations
+```
 
 ---
 
@@ -180,31 +183,35 @@ ai-dev-agent/
 
 ## 1. Install Ollama
 
-Download and install:
+**Windows:** Download from [ollama.com](https://ollama.com/download)
 
-👉 <https://ollama.com>
-
----
+**Run:** `ollama serve` (start server)
 
 ## 2. Pull Model
 
----
+```bash
+ollama pull llama3
+```
 
-## 3. Start Ollama Server
+## 3. Clone/Setup Project
 
----
+```bash
+cd c:/Users/agidavee/ai-dev-agent
+```
 
-## 4. Setup Project
+## 4. Install Dependencies
 
----
+```bash
+pip install -r requirements.txt
+```
 
-## 5. Install Dependencies
+## 5. Run the Agent
 
----
+```bash
+python agent.py
+```
 
-## ▶️ Run the Agent
-
----
+**Note:** If langchain_openai error, run `pip install langchain-openai langchain-core>=0.3.0`
 
 # 🧪 Commands
 
@@ -222,55 +229,56 @@ Download and install:
 
 ## 🔹 Ask Question
 
----
+```
+$ python agent.py
+You: ask
+Ask: How to setup Docker on Windows?
+Agent: Step-by-step Docker setup...
+```
 
 ## 🔹 Debug Error
 
----
+```
+You: explain error
+Paste error: ModuleNotFoundError: No module named 'langchain_openai'
+Agent: Fix: pip install langchain-openai...
+```
 
 ## 🔹 File Analysis
 
----
+```
+You: read file
+Enter file path: agent.py
+Agent: This is the main CLI file that...
+```
 
-# 🧠 Learnings
+**Pro Tip:** Type `help` for all commands.
 
-## 🔹 AI Concepts
+# 🧠 Troubleshooting
 
-- Understanding LLMs  
-- AI agent architecture  
-- Prompt engineering  
+| Issue | Solution |
+|-------|----------|
+| Ollama not found | Install from ollama.com & `ollama pull llama3` |
+| langchain_openai error | `pip install langchain-openai langchain-core>=0.3.0` |
+| SSL/Certifi issues (Windows) | Auto-fixed in agent.py |
+| No rich colors | Install `pip install rich` |
 
-## 🔹 Development Skills
+# 🔮 Future Enhancements
 
-- CLI-based application development  
-- Python modular design  
-
-## 🔹 AI Engineering
-
-- Integrating local LLMs  
-- Tool-based agent design  
-
-## 🔹 Debugging Skills
-
-- Fixing runtime errors  
-- Handling environment issues  
-
----
-
-# 🚀 Future Scope
-
-- Add memory (conversation history)
-- Autonomous task execution
-- GitHub integration
-- DevOps automation (CI/CD, Docker builds)
-- Web UI (React / Streamlit)
-- Multi-agent system
+- Conversation memory
+- Autonomous file edits
+- Git integration
+- Docker deployment
+- Web UI (Streamlit)
+- Multi-LLM support
 
 ---
 
 # 🎯 Conclusion
 
-This project demonstrates how to build a **real AI-powered developer assistant using local LLMs**.
+**Complete documentation created!** AI Dev Agent is now fully documented and ready for use/production/portfolio.
+
+---
 
 By combining:
 

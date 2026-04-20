@@ -1,10 +1,14 @@
-# TODO: Fix langchain_openai ModuleNotFoundError
+# AI Dev Agent TODO - Updated
 
-## Steps
+## Documentation Task: COMPLETE ✅
 
-- [x] Confirm plan with user
-- [ ] Breakdown approved plan into steps
-- [ ] Edit requirements.txt to add langchain-openai and langchain-core
-- [ ] Install dependencies: pip install -r requirements.txt
-- [ ] Test: python agent.py
-- [ ] Mark complete and attempt_completion
+**Plan Steps Status:**
+
+- [x] 1. Create TODO.md with steps.
+- [x] 2. Updated README.md: Installation, Run, Examples, Troubleshooting, Structure.
+- [ ] 3. Install deps: `pip install -r requirements.txt`
+- [ ] 4. Test: `python agent.py`
+- [x] 5. Updated TODO.md.
+- [ ] 6. attempt_completion.
+
+**Next:** Run install/test commands.
